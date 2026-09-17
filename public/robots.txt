@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://glenndale.vercel.app/sitemap.xml
