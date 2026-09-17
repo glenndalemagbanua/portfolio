@@ -1,13 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <link rel="icon" href="/images/icon.png">
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfolio | GlennD</title>
-    <script type="module" crossorigin src="/portfolio/assets/index-DSNR_-8C.js"></script>
-    <link rel="stylesheet" crossorigin href="/portfolio/assets/index-mF5xBtlE.css">
+    <title>Glenn Dale Magbanua | Full Stack Web Developer &amp; SEO/AEO</title>
+    <meta
+      name="description"
+      content="Portfolio of Glenn Dale Magbanua, a Full Stack Web Developer specializing in React, Vue.js, Laravel, PHP, Python, Technical SEO, AEO, and modern web development."
+    />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://glenndale.vercel.app/" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Glenn Dale Magbanua | Full Stack Web Developer &amp; SEO/AEO" />
+    <meta
+      property="og:description"
+      content="Full Stack Web Developer with 3 years of experience, specializing in modern web development and growing expertise in Technical SEO, AEO, and GEO."
+    />
+    <meta property="og:url" content="https://glenndale.vercel.app/" />
+    <meta property="og:image" content="https://glenndale.vercel.app/images/profile.jpg" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Glenn Dale Magbanua | Full Stack Web Developer &amp; SEO/AEO" />
+    <meta
+      name="twitter:description"
+      content="Portfolio of Glenn Dale Magbanua focused on full stack web development, Technical SEO, AEO, and GEO."
+    />
+    <meta name="twitter:image" content="https://glenndale.vercel.app/images/profile.jpg" />
+
+    <script>
+      (function () {
+        const storedTheme = localStorage.getItem('theme');
+        const isDark = storedTheme ? storedTheme === 'dark' : true;
+        if (isDark) {
+          document.documentElement.classList.add('dark');
+        } else {
+          document.documentElement.classList.remove('dark');
+        }
+      })();
+    </script>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Person",
+            "name": "Glenn Dale Magbanua",
+            "url": "https://glenndale.vercel.app/",
+            "image": "https://glenndale.vercel.app/images/profile.jpg",
+            "jobTitle": "Full Stack Web Developer",
+            "description": "Full Stack Web Developer with 3 years of professional experience and a growing focus on Technical SEO, AEO, and GEO.",
+            "sameAs": [
+              "https://github.com/glenndalemagbanua"
+            ],
+            "knowsAbout": [
+              "React.js",
+              "Vue.js",
+              "Laravel",
+              "PHP",
+              "Technical SEO",
+              "AEO",
+              "GEO",
+              "Structured Data"
+            ]
+          },
+          {
+            "@type": "WebSite",
+            "name": "Glenn Dale Magbanua Portfolio",
+            "url": "https://glenndale.vercel.app/",
+            "description": "Personal portfolio showcasing full stack web development projects and SEO/AEO learning focus."
+          }
+        ]
+      }
+    </script>
+    <script type="module" crossorigin src="/assets/index-8qP7GHb7.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-CS6JxV2C.css">
   </head>
   <body>
-    <div id="root"></div>
+    <div id="root"></div>
   </body>
 </html>
