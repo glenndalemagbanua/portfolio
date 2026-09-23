@@ -7,6 +7,7 @@ interface ProjectItem {
   url: string;
   githubUrl?: string;
   image: string;
+  imageAlt: string;
   technologies: string[];
 }
 
@@ -20,6 +21,7 @@ const projects: ProjectItem[] = [
     contribution: 'Built and integrated full stack features, focusing on maintainable UI patterns, API integration, and reliable data handling.',
     url: 'https://xervelab.online',
     image: 'https://xervelab.online/images/xl-logo.png',
+    imageAlt: 'XerveLab logo — full stack laboratory workflow web platform built with Laravel and React',
     technologies: ['Laravel', 'React.js', 'TypeScript', 'Tailwind CSS', 'MySQL'],
   },
   {
@@ -28,6 +30,7 @@ const projects: ProjectItem[] = [
     contribution: 'Implemented responsive pages and reusable components to improve usability across desktop and mobile devices.',
     url: 'https://san-vicente-bis.vercel.app/',
     image: 'https://san-vicente-bis.vercel.app/favicon.svg',
+    imageAlt: 'San Vicente BIS logo — barangay information system built with Laravel and React',
     technologies: ['Laravel', 'React.js', 'TypeScript', 'Tailwind CSS', 'MySQL'],
   },
   {
@@ -36,6 +39,7 @@ const projects: ProjectItem[] = [
     contribution: 'Built frontend views with attention to layout consistency, readable content hierarchy, and smooth interactions.',
     url: 'https://gijeys-diner.vercel.app/',
     image: 'https://san-vicente-bis.vercel.app/favicon.svg',
+    imageAlt: "Gijey's Diner logo — responsive restaurant web experience built with React",
     technologies: ['React.js', 'TypeScript', 'Tailwind CSS'],
   },
 ];
@@ -107,7 +111,7 @@ export default function Project() {
                           <img
                             className="w-full h-full object-contain p-1.5 sm:p-2"
                             src={project.image}
-                            alt={`${project.title} project logo`}
+                            alt={project.imageAlt}
                             width="128"
                             height="128"
                             loading="lazy"

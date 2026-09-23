@@ -7,7 +7,7 @@ export default function Footer() {
         <p className="text-gray-600 dark:text-gray-400">
           © 2026 Glenn Dale Magbanua
         </p>
-        <p className="text-gray-600 dark:text-gray-400 mt-2">Full Stack Web Developer | SEO &amp; AEO</p>
+        <p className="text-gray-600 dark:text-gray-400 mt-2">SEO &amp; AEO Specialist · Web Developer · AI Engineer</p>
         <a
           href="https://github.com/glenndalemagbanua"
           target="_blank"

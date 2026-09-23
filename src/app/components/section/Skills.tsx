@@ -142,9 +142,9 @@ const skillCategories: SkillCategory[] = [
 
 export default function Skills() {
   return (
-    <section id="skills" className="py-20">
+    <section id="skills" aria-labelledby="skills-heading" className="py-20">
       <div className="container mx-auto px-4">
-        <h2 className="text-4xl font-bold mb-12 dark:text-white text-center">Skills</h2>
+        <h2 id="skills-heading" className="text-4xl font-bold mb-12 dark:text-white text-center">Skills</h2>
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {skillCategories.map((category) => {
             const Icon = category.icon;

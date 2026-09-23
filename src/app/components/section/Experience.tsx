@@ -129,9 +129,9 @@ function ExperienceCard({ exp }: { exp: ExperienceItem }) {
 
 export default function Experience() {
   return (
-    <section id="experience" className="py-20">
+    <section id="experience" aria-labelledby="experience-heading" className="py-20">
       <div className="container mx-auto px-4">
-        <h2 className="text-4xl font-bold mb-12 dark:text-white text-center">Work Experience</h2>
+        <h2 id="experience-heading" className="text-4xl font-bold mb-12 dark:text-white text-center">Work Experience</h2>
         <div className="max-w-4xl mx-auto space-y-8">
           {experiences.map((exp) => (
             <ExperienceCard key={exp.id} exp={exp} />

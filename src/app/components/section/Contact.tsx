@@ -2,10 +2,10 @@ import { Github, Mail } from 'lucide-react';
 
 export default function Contact() {
   return (
-    <section id="contact" className="py-20">
+    <section id="contact" aria-labelledby="contact-heading" className="py-20">
       <div className="container mx-auto px-4 text-center">
-        <h2 className="text-4xl font-bold mb-8 dark:text-white">Let&apos;s Connect</h2>
-        <p className="text-xl text-gray-600 dark:text-zinc-400 mb-8">Available for full stack web development, technical SEO, and website optimization opportunities.</p>
+        <h2 id="contact-heading" className="text-4xl font-bold mb-8 dark:text-white">Let&apos;s Connect</h2>
+        <p className="text-xl text-gray-600 dark:text-zinc-400 mb-8">Available for web development, frontend development, technical SEO, AEO, and website optimization opportunities.</p>
         <a href="mailto:glenndalemagbanua@gmail.com" className="inline-block px-8 py-4 bg-emerald-500 text-white rounded-full font-semibold hover:bg-emerald-600 transition-colors" aria-label="Send email to Glenn Dale Magbanua">Contact Me</a>
         <div className="mt-6 flex items-center justify-center gap-4 flex-wrap">
           <a

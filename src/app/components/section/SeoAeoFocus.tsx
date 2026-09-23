@@ -34,9 +34,9 @@ const focusCards: FocusCard[] = [
 
 export default function SeoAeoFocus() {
   return (
-    <section id="seo-aeo" className="py-20">
+    <section id="seo-aeo" aria-labelledby="seo-aeo-heading" className="py-20">
       <div className="container mx-auto px-4">
-        <h2 className="text-4xl font-bold mb-3 dark:text-white text-center">SEO &amp; AEO</h2>
+        <h2 id="seo-aeo-heading" className="text-4xl font-bold mb-3 dark:text-white text-center">SEO &amp; AEO</h2>
         <p className="text-center text-gray-600 dark:text-zinc-400 mb-10 max-w-3xl mx-auto">
           SEO &amp; AEO Focus — areas where I&apos;m actively developing and applying search optimization knowledge alongside my full stack development background.
         </p>

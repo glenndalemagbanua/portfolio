@@ -1,3 +1,5 @@
+# Allow all legitimate search engine and AI/answer engine crawlers
+# (e.g. Googlebot, Bingbot, GPTBot, PerplexityBot, Google-Extended, ClaudeBot).
 User-agent: *
 Allow: /
 

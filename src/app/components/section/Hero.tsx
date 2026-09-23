@@ -19,7 +19,9 @@ export default function Hero() {
               <img
                 className="w-44 h-44 rounded-full object-cover ring-4 ring-emerald-500 ring-offset-4 ring-offset-white dark:ring-offset-zinc-950"
                 src="/images/profile.jpg"
-                alt="Portrait of Glenn Dale Magbanua"
+                alt="Portrait of Glenn Dale Magbanua, SEO and AEO specialist and web developer"
+                width="176"
+                height="176"
                 fetchPriority="high"
               />
               <span className="absolute bottom-3 right-3 flex h-5 w-5" role="status" aria-label="Online" title="Online">
@@ -30,7 +32,7 @@ export default function Hero() {
             <div>
               <h1 className="text-5xl font-bold text-gray-900 dark:text-white">Glenn Dale Magbanua</h1>
               <p className="text-5xl font-bold mb-6">
-                <span className="text-3xl bg-gradient-to-r from-emerald-400 to-blue-500 bg-clip-text text-transparent">Full Stack Web Developer | SEO & AEO</span>
+                <span className="text-3xl bg-gradient-to-r from-emerald-400 to-blue-500 bg-clip-text text-transparent">SEO &amp; AEO Specialist · Web Developer · AI Engineer</span>
               </p>
             </div>
           </div>

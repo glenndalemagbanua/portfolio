@@ -6,6 +6,7 @@ import Experience from './components/section/Experience';
 import Project from './components/section/Project';
 import SeoAeoFocus from './components/section/SeoAeoFocus';
 import CurrentlyLearning from './components/section/CurrentlyLearning';
+import Faq from './components/section/Faq';
 import Contact from './components/section/Contact';
 import Footer from './components/section/Footer';
 import { ThemeProvider } from './store/themeStore';
@@ -14,9 +15,11 @@ export default function App() {
   const sections = [
     { id: 'home', label: 'Home' },
     { id: 'about', label: 'About' },
+    { id: 'experience', label: 'Experience' },
     { id: 'skills', label: 'Skills' },
     { id: 'projects', label: 'Projects' },
     { id: 'seo-aeo', label: 'SEO & AEO' },
+    { id: 'faq', label: 'FAQ' },
     { id: 'contact', label: 'Contact' },
   ];
 
@@ -40,8 +43,9 @@ export default function App() {
           </div>
           <CurrentlyLearning />
           <div className="dark:bg-zinc-900/30">
-            <Contact />
+            <Faq />
           </div>
+          <Contact />
         </main>
 
         <Footer />
