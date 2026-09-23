@@ -15,8 +15,17 @@ export default function Hero() {
       <div className="container mx-auto max-w-4xl">
         <div className="grid place-items-center text-center">
           <div className="flex flex-col md:flex-row items-center gap-8 mb-5">
-            <div className="w-44">
-              <img className="w-44 h-44 rounded-full object-cover" src="/images/profile.jpg" alt="Portrait of Glenn Dale Magbanua" fetchPriority="high" />
+            <div className="w-44 relative">
+              <img
+                className="w-44 h-44 rounded-full object-cover ring-4 ring-emerald-500 ring-offset-4 ring-offset-white dark:ring-offset-zinc-950"
+                src="/images/profile.jpg"
+                alt="Portrait of Glenn Dale Magbanua"
+                fetchPriority="high"
+              />
+              <span className="absolute bottom-3 right-3 flex h-5 w-5" role="status" aria-label="Online" title="Online">
+                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75"></span>
+                <span className="relative inline-flex h-5 w-5 rounded-full bg-emerald-500 border-2 border-white dark:border-zinc-950"></span>
+              </span>
             </div>
             <div>
               <h1 className="text-5xl font-bold text-gray-900 dark:text-white">Glenn Dale Magbanua</h1>

@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { ChevronDown, ChevronUp } from 'lucide-react';
 
 interface ExperienceItem {
   id: string;
@@ -101,9 +102,17 @@ function ExperienceCard({ exp }: { exp: ExperienceItem }) {
           aria-expanded={isExpanded}
           aria-controls={detailsId}
           onClick={() => setIsExpanded((prev) => !prev)}
-          className="mb-5 inline-flex items-center text-sm text-emerald-400 hover:text-emerald-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-400/80 focus-visible:ring-offset-2 focus-visible:ring-offset-zinc-900 rounded-sm transition-colors"
+          className="mb-5 inline-flex items-center gap-1 text-sm text-emerald-400 hover:text-emerald-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-400/80 focus-visible:ring-offset-2 focus-visible:ring-offset-zinc-900 rounded-sm transition-colors"
         >
-          {isExpanded ? 'Show Less ↑' : 'See More ↓'}
+          {isExpanded ? (
+            <>
+              Show Less <ChevronUp size={16} />
+            </>
+          ) : (
+            <>
+              See More <ChevronDown size={16} />
+            </>
+          )}
         </button>
       )}
 

@@ -28,14 +28,6 @@ const projects: ProjectItem[] = [
     technologies: ['Laravel', 'React.js', 'TypeScript', 'Tailwind CSS', 'MySQL'],
   },
   {
-    title: 'Scanify',
-    description: 'QR-based web utility that supports quick scanning and interaction with external or internal resource links.',
-    contribution: 'Developed a lightweight React interface with API-driven behavior and a clear, task-focused user flow.',
-    url: 'https://scanify-qr.vercel.app/',
-    image: 'https://san-vicente-bis.vercel.app/favicon.svg',
-    technologies: ['React.js', 'TypeScript', 'API'],
-  },
-  {
     title: "Gijey's Diner",
     description: 'Restaurant-style web experience showcasing menu and brand presentation with a modern responsive interface.',
     contribution: 'Built frontend views with attention to layout consistency, readable content hierarchy, and smooth interactions.',
@@ -64,8 +56,8 @@ export default function Project() {
             </a>
             .
           </p>
-          <div className="max-w-4xl mx-auto space-y-12">
-            <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-8">
+          <div className="max-w-7xl mx-auto space-y-12">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {projects.map((project) => (
                 <article
                   key={project.title}

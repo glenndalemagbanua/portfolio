@@ -1,6 +1,5 @@
 
-import { Moon, Sun, Download, Menu as MenuIcon, X as CloseIcon, Github } from 'lucide-react';
-import { useTheme } from '../../store/themeStore';
+import { Download, Menu as MenuIcon, X as CloseIcon, Github } from 'lucide-react';
 import { Drawer, DrawerTrigger, DrawerContent, DrawerClose } from '../ui/drawer';
 import { useState } from 'react';
 
@@ -14,8 +13,6 @@ interface HeaderProps {
 }
 
 export default function Header({ sections }: HeaderProps) {
-  const { isDarkMode, toggleTheme } = useTheme();
-
   const handleDownload = () => {
     const link = document.createElement('a');
     link.href = '/files/glenn-dale-magbanua-resume.pdf';
@@ -26,6 +23,20 @@ export default function Header({ sections }: HeaderProps) {
   };
 
   const [drawerOpen, setDrawerOpen] = useState(false);
+
+  const handleNavigate = (event: React.MouseEvent<HTMLAnchorElement>, sectionId: string) => {
+    event.preventDefault();
+    setDrawerOpen(false);
+    // Wait for the drawer close animation and its scroll-lock to release
+    // before scrolling, otherwise the restored scroll position cancels navigation.
+    setTimeout(() => {
+      const target = document.getElementById(sectionId);
+      if (target) {
+        target.scrollIntoView({ behavior: 'smooth' });
+        history.replaceState(null, '', `#${sectionId}`);
+      }
+    }, 350);
+  };
 
   return (
     <header className="fixed top-0 w-full bg-white/80 dark:bg-zinc-950 backdrop-blur-sm z-50 border-b dark:border-zinc-800">
@@ -62,13 +73,6 @@ export default function Header({ sections }: HeaderProps) {
           >
             <Github size={20} />
           </a>
-          <button
-            onClick={toggleTheme}
-            className="p-2 rounded-lg bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-white hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
-            aria-label="Toggle color theme"
-          >
-            {isDarkMode ? <Sun size={20} /> : <Moon size={20} />}
-          </button>
         </div>
         {/* Mobile Burger Menu */}
         <div className="md:hidden flex items-center">
@@ -99,7 +103,7 @@ export default function Header({ sections }: HeaderProps) {
                     key={section.id}
                     href={`#${section.id}`}
                     className="text-base hover:text-emerald-400 dark:hover:text-emerald-400 dark:text-gray-400 transition-colors"
-                    onClick={() => setDrawerOpen(false)}
+                    onClick={(event) => handleNavigate(event, section.id)}
                   >
                     {section.label}
                   </a>
@@ -121,12 +125,6 @@ export default function Header({ sections }: HeaderProps) {
                 >
                   <Github size={20} className="inline mr-2" /> GitHub Profile
                 </a>
-                <button
-                  onClick={() => { toggleTheme(); setDrawerOpen(false); }}
-                  className="p-2 rounded-lg bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-white hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors text-left"
-                >
-                  {isDarkMode ? <Sun size={20} className="inline mr-2" /> : <Moon size={20} className="inline mr-2" />} Toggle Theme
-                </button>
               </div>
             </DrawerContent>
           </Drawer>

@@ -27,13 +27,21 @@ export default function App() {
 
         <main className="pt-20">
           <Hero />
-          <About />
-          <Skills />
+          <div className="dark:bg-zinc-900/30">
+            <About />
+          </div>
           <Experience />
+          <div className="dark:bg-zinc-900/30">
+            <Skills />
+          </div>
           <Project />
-          <SeoAeoFocus />
+          <div className="dark:bg-zinc-900/30">
+            <SeoAeoFocus />
+          </div>
           <CurrentlyLearning />
-          <Contact />
+          <div className="dark:bg-zinc-900/30">
+            <Contact />
+          </div>
         </main>
 
         <Footer />

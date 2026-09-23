@@ -31,13 +31,9 @@
 
     <script>
       (function () {
-        const storedTheme = localStorage.getItem('theme');
-        const isDark = storedTheme ? storedTheme === 'dark' : true;
-        if (isDark) {
-          document.documentElement.classList.add('dark');
-        } else {
-          document.documentElement.classList.remove('dark');
-        }
+        // Light mode is disabled; always use dark mode.
+        document.documentElement.classList.add('dark');
+        localStorage.setItem('theme', 'dark');
       })();
     </script>
 
